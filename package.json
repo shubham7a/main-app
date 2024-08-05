@@ -3,15 +3,20 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "cross-env NEXT_PRIVATE_LOCAL_WEBPACK=true node server.js",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
   },
   "dependencies": {
+    "@module-federation/nextjs-mf": "^0.0.0-next-20240103032717",
+    "cors": "^2.8.5",
+    "cross-env": "^7.0.3",
+    "express": "^4.19.2",
+    "next": "14.2.5",
     "react": "^18",
     "react-dom": "^18",
-    "next": "14.2.5"
+    "webpack": "^5.93.0"
   },
   "devDependencies": {
     "postcss": "^8",
